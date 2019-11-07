@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {CopyToClipboard} from 'react-copy-to-clipboard';
 import './ColorBox.css'; 
-
+  
 class ColorBox extends Component{
   constructor(props){
     super(props);
@@ -22,12 +22,12 @@ class ColorBox extends Component{
       <CopyToClipboard text={background} onCopy={this.changeCopyState}>
         <div className='ColorBox' style={{background: background}}>
           <div 
-            style={{background: background}}
+            style={{background}}
             className={`copy-overlay ${copied && 'show'}`} 
           />
           <div className={`copy-msg ${copied && 'show'}`}>
             <h1>Copied!</h1>
-            <p>{this.props.background}</p>
+            <p>{background}</p>
           </div>
           <div className='copy-container'>
             <div className='box-content'>

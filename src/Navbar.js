@@ -41,7 +41,7 @@ class Navbar extends Component{
             <Slider 
               defaultValue={level} 
               min={100} 
-              max={900} 
+              max={900}  
               step={100}
               onAfterChange={changeLevel}
               trackStyle={{backgroundColor: 'transparent'}}
@@ -72,7 +72,7 @@ class Navbar extends Component{
           autoHideDuration={3000}
           message={<span id='message-id'>Format Changed To {format.toUpperCase()}</span>}   
           ContentProps={{
-            'aria-describedby': 'message-is'
+            'aria-describedby': 'message-id'
           }} 
           onClose={this.closeSnackbar}
           action={[
