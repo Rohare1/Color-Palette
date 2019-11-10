@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { withStyles } from '@material-ui/styles';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 import Snackbar from '@material-ui/core/Snackbar';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
-
 import Slider from 'rc-slider';
+import styles from './styles/NavbarStyles';
 import 'rc-slider/assets/index.css';  
-import './Navbar.css';
+
+
 
 class Navbar extends Component{
   constructor(props){
@@ -28,16 +30,16 @@ class Navbar extends Component{
     this.setState({open: false});
   }
   render(){
-    const {level, changeLevel, showingAllColors} = this.props;
+    const {level, changeLevel, showingAllColors, classes} = this.props;
     const { format } = this.state;
     return(
-      <header className='Navbar'>
-        <div className='logo'>
+      <header className={classes.Navbar}>
+        <div className={classes.logo}>
           <Link to='/'>React Color Picker</Link>
         </div>
         {showingAllColors && (
-          <div className='slider-container'>
-            <div className='slider'>
+          <div>
+            <div className={classes.slider}>
               <span>Level:{level}</span>
               <Slider 
                 defaultValue={level} 
@@ -45,23 +47,11 @@ class Navbar extends Component{
                 max={900}  
                 step={100}
                 onAfterChange={changeLevel}
-                trackStyle={{backgroundColor: 'transparent'}}
-                railStyle={{height: 8}}
-                handleStyle={{ 
-                  borderColor: 'green',
-                  height: 13, 
-                  width: 13, 
-                  marginLeft: -7, 
-                  marginTop: -3,
-                  boxShadow: 'none', 
-                  backgroundColor: 'green', 
-                  border: '2px solid green',
-                }}
               />  
             </div> 
           </div>
         )}  
-        <div className='select-container'>
+        <div className={classes.selectContainer}>
           <Select value={format} onChange={this.handleFormatChange}>
              <MenuItem value='hex'>HEX - #ffffff</MenuItem>
              <MenuItem value='rgb'>RGB - rgb(255,255,255)</MenuItem>
@@ -88,4 +78,4 @@ class Navbar extends Component{
   }
 }       
 
-export default Navbar;
+export default withStyles(styles)(Navbar);
