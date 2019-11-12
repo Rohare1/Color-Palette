@@ -79,7 +79,7 @@ class NewPaletteForm extends Component{
     super(props);
     this.state = {
       open: true,
-      currentColor: 'teal',
+      currentColor: 'red',
       newColorName: '',
       colors: [],
       newPaletteName: ''
