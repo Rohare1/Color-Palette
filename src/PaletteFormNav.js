@@ -61,6 +61,7 @@ class PaletteFormNav extends Component{
               variant="h6" 
               color="inherit" 
               noWrap
+              className={classes.title}
             >
               Create A Palette
             </Typography>
