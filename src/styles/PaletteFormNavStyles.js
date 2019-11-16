@@ -29,11 +29,11 @@ const styles = theme => ({
     marginLeft: 12,
     marginRight: 20,
   },
-  title: {
-    [sizes.down('xs')]: {
-      display: 'none'
-    }
-  },
+  // title: {
+  //   [sizes.down('xs')]: {
+  //     display: 'none'
+  //   }
+  // },
   hide: {
     display: 'none',
   },
