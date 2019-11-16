@@ -146,6 +146,8 @@ class NewPaletteForm extends Component{
             removeColor={this.removeColor}
             axis='xy'
             onSortEnd={this.onSortEnd}
+            // small bug fix for delete button drag will be counted after 20px
+            distance={20}
           />
         </main>
       </div>
