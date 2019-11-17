@@ -43,6 +43,8 @@ const styles = {
     },
   },
   deleteIcon:{
+    position: 'relative',
+    right: '10px',
     transition: 'all 0.3s ease-in-out'
   }
 };
