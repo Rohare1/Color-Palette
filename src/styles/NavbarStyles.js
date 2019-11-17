@@ -30,7 +30,7 @@ export  default {
       width: '13px', 
       marginTop: '-3px'
     },
-    [sizes.down('md')]:{
+    [sizes.down('sm')]:{
       width: '150px'
     },
   },  
@@ -47,9 +47,9 @@ export  default {
       textDecoration: 'none',
       color: 'black'
     },
-    [sizes.down('xs')]:{
-      display: 'none'
-    },
+    // [sizes.down('xs')]:{
+    //   display: 'none'
+    // },
   },
   selectContainer: {
     marginLeft: 'auto',
